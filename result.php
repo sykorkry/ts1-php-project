@@ -10,7 +10,7 @@
             margin: 50px;
         }
     </style>
-    <title>Your order</title>
+    <title>TS1 - Results</title>
 </head>
 <body>
 
@@ -30,7 +30,7 @@ if (!isset($_POST['lastName'])) {
     $valid_order = false;
 } else $lastName = $_POST['lastName'];
 
-if (!isset($_POST['email'])) {
+if (!isset($_POST['email']) || $_POST['email']=="") {
     echo "<p>Please fill in your email.</p>";
     $valid_order = false;
 } else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -127,7 +127,7 @@ else {
 }
 ?>
 
-<p><a href="index.html">go back</a></p>
+<p><a href="index.html">Go back.</a></p>
 
 </body>
 </html>
