@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        body {
+            margin: 50px;
+        }
+    </style>
+    <title>Order</title>
+</head>
+<body>
+
+<form action="result.php" method="post">
+    <div class="container">
+        <h1>Flight order</h1>
+        <p>Please fill in this form to complete your order.</p>
+        <hr>
+        <p>
+            <label for="firstName"><b>First Name:</b></label>
+            <input id="firstName" type="text" placeholder="Enter First Name" name="firstName" required>
+
+            <label for="lastName"><b>Last Name:</b></label>
+            <input id="lastName" type="text" placeholder="Enter Last Name" name="lastName" required>
+        </p>
+        <p>
+            <label for="email"><b>Email:</b></label>
+            <input id="email" type="text" placeholder="Enter Email" name="email" required>
+        </p>
+
+        <p>
+            <label for="birthDate"><b>Birth Date:</b></label>
+            <input id="birthDate" type="date" placeholder="Enter Birth Data" name="birthDate" required>
+        </p>
+
+        <p>
+            <label for="destination"><b>Destination:</b></label>
+            <select id="destination" name="destination">
+                <option value="berlin">Berlin</option>
+                <option value="london">London</option>
+                <option value="newyork">New York</option>
+                <option value="brno">Brno</option>
+            </select>
+        </p>
+
+        <p>
+            <b>Discount:</b>
+            <input type="radio" id="student" name="discount" value="student">
+            <label for="student">Student</label>
+            <input type="radio" id="senior" name="discount" value="senior">
+            <label for="senior">Senior</label>
+            <input type="radio" id="coupon" name="discount" value="coupon">
+            <label for="coupon">Coupon</label>
+            <input type="radio" id="none" name="discount" value="none" checked="checked">
+            <label for="none">None</label>
+        </p>
+        <hr>
+        <p>By making the order you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <button type="submit">Complete order</button>
+    </div>
+</form>
+
+</body>
+</html>
+
